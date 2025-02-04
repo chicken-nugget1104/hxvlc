@@ -214,7 +214,9 @@ class FlxVideoSprite extends FlxSprite
 	 */
 	public inline function parseStop():Void
 	{
-		bitmap?.parseStop();
+		if (bitmap != null) {
+    			bitmap.parseStop();
+		}
 	}
 
 	/**
@@ -232,7 +234,9 @@ class FlxVideoSprite extends FlxSprite
 	 */
 	public inline function stop():Void
 	{
-		bitmap?.stop();
+		if (bitmap != null) {
+    			bitmap.stop();
+		}
 	}
 
 	/**
@@ -240,7 +244,9 @@ class FlxVideoSprite extends FlxSprite
 	 */
 	public inline function pause():Void
 	{
-		bitmap?.pause();
+		if (bitmap != null) {
+    			bitmap.pause();
+		}
 	}
 
 	/**
@@ -248,7 +254,9 @@ class FlxVideoSprite extends FlxSprite
 	 */
 	public inline function resume():Void
 	{
-		bitmap?.resume();
+		if (bitmap != null) {
+    			bitmap.resume();
+		}
 	}
 
 	/**
@@ -256,7 +264,9 @@ class FlxVideoSprite extends FlxSprite
 	 */
 	public inline function togglePaused():Void
 	{
-		bitmap?.togglePaused();
+		if (bitmap != null) {
+    			bitmap.togglePaused();
+		}
 	}
 
 	#if FLX_SOUND_SYSTEM
@@ -301,7 +311,9 @@ class FlxVideoSprite extends FlxSprite
 
 	public override function kill():Void
 	{
-		bitmap?.pause();
+		if (bitmap != null) {
+    			bitmap.pause();
+		}
 
 		super.kill();
 	}
@@ -310,7 +322,9 @@ class FlxVideoSprite extends FlxSprite
 	{
 		super.revive();
 
-		bitmap?.resume();
+		if (bitmap != null) {
+    			bitmap.resume();
+		}
 	}
 
 	@:noCompletion
